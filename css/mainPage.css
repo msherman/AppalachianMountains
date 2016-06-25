@@ -1,25 +1,54 @@
 html, body{
 	height: 100%;
-}
-.mainContent{
-	background-color: blue;
-	width: 80%;
-}
-
-.header{
-	background-color: green;
-	width: 100%;
+		background-color: #CDAA7D;
+		
 }
 
 .mainContainer{
-	background-color: yellow;
-	height: 100%;
+	background-color: #FEFFEF;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	padding: 10px;
+}
+
+.header{
+	width: 100%;
+	margin: 0;
+}
+
+.mainContent{
+	width: 80%;
+	text-align: center;
 }
 
 .nav{
-	background-color: orange;
+	background-color: #EEF3E2;
 	width: 20%;
+	text-align: left;
+	
+}
+.dayNav{
+	background-color: #EBECE4;
+	text-align: left;
+	padding-left: 25%;
+}
+.activityNav{
+	background-color: #ECF1EF;
+	padding-left:45%;
+}
+
+.contentImg{
+	margin: 5%;
+	background-color: #EEF3E2;
+	padding: 15px;
+}
+
+.insideImages{
+	width: 100%;
+	height: auto;
+}
+.content{
+	text-align: left;
+	padding: 0 15px 0 15px;
 }
