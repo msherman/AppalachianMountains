@@ -65,7 +65,11 @@ var nav = {
 
 nav.display();
 
-$(".dayNav").hover(function(){
-	console.log($(this).attr('class'));
-	var child = $(this).children();
+$(".dayNav, .activityNav").mouseover(function(){
+	var dayName = $(this).attr('class').split(" ");
+	$(".activityNav."+dayName[1]).css("display","block");
 });
+
+$(".activityNav, .dayNav").mouseout(function(){
+	$(".activityNav").css("display", "none");
+})

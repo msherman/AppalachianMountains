@@ -40,9 +40,7 @@ html, body{
 .activityNav{
 	background-color: #ECF1EF;
 	padding-left:25%;
-}
-.activityShow{
-	background-color: blue;
+	display: none;
 }
 
 .contentImg{
