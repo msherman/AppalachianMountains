@@ -32,7 +32,7 @@ var nav = {
 	},
 	{
 		"name": "Day 7",
-		"activities": ["Monticello", "Trans-Allegheny Lunatic Asylum"],
+		"activities": ["Monticello", "Lunatic Asylum"],
 		"destination": "Clarksburg, WV"
 	},
 	{
@@ -41,21 +41,31 @@ var nav = {
 		"destination": "Green Bay, WI"
 	}],
 	display: function(){
-		var dayTemplate = "<div class='dayNav'>%1</div>";
-		var activityTemplate = "<div class='activityNav'>%1</div>";
+		var dayTemplate = "<div class='dayNav %1'>%2";
+		var activityTemplate = "<div class='activityNav %1'>%2</div>";
 		var dayDetails = "";
 		var dayName = "";
 		var activityName = "";
+		var dayClass = "";
 		for (day in nav.days){
 			dayDetails = nav.days[day];
-			var dayName = dayTemplate.replace("%1", dayDetails.name);
+			dayClass = dayDetails.name.replace(" ", "")
+			var dayName = dayTemplate.replace("%1", dayClass);
+			dayName = dayName.replace("%2", dayDetails.name+" - " + dayDetails.destination);
 			$(".nav").append(dayName);
 			for (activity in nav.days[day].activities){
-				var activityName = activityTemplate.replace("%1", dayDetails.activities[activity]);
+				var activityName = activityTemplate.replace("%1", dayDetails.name.replace(" ", ""));
+				activityName = activityName.replace("%2", dayDetails.activities[activity]);
 				$(".nav").append(activityName);
 			}
+			$(".nav").append("</div>");
 		}
 	}
 }
 
 nav.display();
+
+$(".dayNav").hover(function(){
+	console.log($(this).attr('class'));
+	var child = $(this).children();
+});
