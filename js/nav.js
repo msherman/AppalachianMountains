@@ -70,6 +70,6 @@ $(".dayNav, .activityNav").mouseover(function(){
 	$(".activityNav."+dayName[1]).css("display","block");
 });
 
-$(".activityNav, .dayNav").mouseout(function(){
+/*$(".dayNav").mouseout(function(){
 	$(".activityNav").css("display", "none");
-})
+})*/
