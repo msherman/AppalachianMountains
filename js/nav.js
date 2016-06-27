@@ -41,8 +41,8 @@ var nav = {
 		"destination": "Green Bay, WI"
 	}],
 	display: function(){
-		var dayTemplate = "<div class='dayNav %1'>%2";
-		var activityTemplate = "<div class='activityNav %1'>%2</div>";
+		var dayTemplate = "<div id='%1' class='dayNav navElement'>%2";
+		var activityTemplate = "<div id='%1' class='activityNav navElement'>%2</div>";
 		var dayDetails = "";
 		var dayName = "";
 		var activityName = "";
@@ -66,8 +66,8 @@ var nav = {
 nav.display();
 
 $(".dayNav, .activityNav").mouseover(function(){
-	var dayName = $(this).attr('class').split(" ");
-	$(".activityNav."+dayName[1]).css("display","block");
+	var dayName = $(this).attr('id');
+	$("#"+dayName+".activityNav").css("display","block");
 });
 
 /*$(".dayNav").mouseout(function(){

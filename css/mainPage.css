@@ -34,16 +34,15 @@ html, body{
 	padding-left: 15%;
 }
 
-.dayNav:hover{
+.navElement:hover{
 	background-color: #FEFFEF;
+	text-decoration: underline;
+	font-size: 110%;
 }
 .activityNav{
 	background-color: #ECF1EF;
 	padding-left:25%;
 	display: none;
-}
-.activityNav:hover{
-	background-color: #FEFFEF;
 }
 
 .contentImg{
